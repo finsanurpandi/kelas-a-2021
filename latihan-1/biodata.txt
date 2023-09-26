@@ -6,3 +6,6 @@ Npm : 5520121023
 
 NAMA :Fikri Miftah Fajar
 NPM  :5520121020
+
+Nama    : Badrussalam
+NPM     : 5520121012
