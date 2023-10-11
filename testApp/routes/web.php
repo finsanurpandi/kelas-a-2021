@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CobaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/coba', [CobaController::class, 'coba']);
 
-Route::get('/welcome', function () {
-    return view('sample.welcome');
-});
+Route::name('user.')
+        ->prefix('user')
+        ->group( function () {
+            Route::get('/welcome', function () {
+                return view('sample.welcome');
+            });
+        });
 
 // Route::view('/test', 'test');
 
@@ -28,7 +34,7 @@ route::get('/test/{name?}/{kelas}', function ($name = null) {
     }
 })->name('test');
 
-route('test', ['finsa', 'kelas-a']);
+// route('test', ['finsa', 'kelas-a']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
