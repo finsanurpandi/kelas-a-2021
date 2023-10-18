@@ -42,5 +42,9 @@
 
     <x-alertx type="danger" message="Lorem ipsum dolor sit amet consectetur, adipisicing elit."/>
     
+    <x-badge color="yellow">
+        <x-slot:header> BADGE </x-slot:header>
+        Ini adalah Badgex
+    </x-badge>
 </body>
 </html>

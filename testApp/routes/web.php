@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/coba', [CobaController::class, 'coba']);
-
+Route::view('/contoh', 'contoh');
 Route::name('user.')
         ->prefix('user')
         ->group( function () {
