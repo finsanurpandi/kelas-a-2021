@@ -57,6 +57,8 @@ Route::name('lecturer.')
         ->prefix('lecturer')
         ->group( function () {
             Route::get('/', [LecturerController::class, 'index'])->name('index');
+            Route::get('/create', [LecturerController::class, 'create'])->name('create');
+            Route::post('/store', [LecturerController::class, 'store'])->name('store');
         });
 
 require __DIR__.'/auth.php';
