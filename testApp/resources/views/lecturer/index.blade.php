@@ -27,6 +27,11 @@
                             </tr>
                         @endforeach
                     </table> --}}
+
+                    @foreach($user->unreadNotifications as $notif)
+                        User dengan email {{ $notif->data['email'] }} telah mendaftar.
+                    @endforeach
+                    <br/><br/>
                     <x-primary-button :href="route('lecturer.create')">
                       Tambah Data
                     </x-primary-button>

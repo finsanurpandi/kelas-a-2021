@@ -72,6 +72,9 @@ Route::name('lecturer.')
 
             // relationship
             Route::get('/{nidn}/students', [LecturerController::class, 'students'])->name('students');
+
+            // mail
+            Route::get('/testMail', [LecturerController::class, 'testMail'])->name('test.mail');
         });
 
 require __DIR__.'/auth.php';
